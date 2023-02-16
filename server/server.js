@@ -11,6 +11,16 @@ app.get('/', (req, res) => {
   res.send("Welcome to Planets server")
 })
 
-app.listen(5000, async() => {
-  console.log(`Server listening on 5000`)
+const PORT = process.env.PORT
+
+app.listen(PORT, async() => {
+  console.log(`Server listening on ${PORT}`)
+
+  mongoose.set('strictQuery', false);
+  try {
+    mongoose.connect(process.env.PROD_DB)
+    console.log('Connected to DB')
+  } catch (error) {
+    console.log('Unable to connect', error)
+  }
 })

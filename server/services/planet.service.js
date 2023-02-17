@@ -38,6 +38,7 @@ const getPlanet = async (id) => {
       code: STATUS.NOT_FOUND
     }
   }
+  return planet
 }
 
 // Update planet data

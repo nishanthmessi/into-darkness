@@ -55,7 +55,7 @@ const planetSchema = new mongoose.Schema({
       required: true
     }
   }
-})
+},  {timestamps: true})
 
 const Planet = mongoose.model('Planet', planetSchema)
 

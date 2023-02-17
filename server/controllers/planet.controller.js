@@ -5,11 +5,12 @@ const {STATUS} = require('../utils/statuscodes')
 // Create new planet
 const createPlanet = async (req, res) => {
   try {
-    const response = await planetService.create(req.body)
+    const response = await planetService.createPlanet(req.body)
     successResponseBody.data = response
     successResponseBody.message = "New Planet added successfully" 
-    return res.STATUS(STATUS.CREATED).json(successResponseBody)
+    return res.status(STATUS.CREATED).json(successResponseBody)
   } catch (error) {
+    console.log(error)
     errorResponseBody.err = error
     errorResponseBody.message = "Unable to create Planet. Try again"
     return res.status(STATUS.INTERNAL_SERVER_ERROR).json(errorResponseBody)
@@ -50,7 +51,7 @@ const updatePlanet = async (req, res) => {
     const response = await planetService.updatePlanet(req.params.id, req.body)
     successResponseBody.data = response
     successResponseBody.message = "Updated successfully" 
-  return res.status(STATUS.OK).json(successResponseBody)
+    return res.status(STATUS.OK).json(successResponseBody)
   } catch (error) {
     errorResponseBody.err = error
     errorResponseBody.message = "Unable to update planet details"

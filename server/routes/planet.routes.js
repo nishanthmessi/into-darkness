@@ -12,15 +12,15 @@ const routes = (app) => {
     planetController.getPlanets,
   )
   // Fetch a single planet route
-  app.get('api/planet/:id',
+  app.get('/api/planet/:id',
     planetController.getPlanet,
   )
   // Update planet route
-  app.put('api/planet/update/:id',
+  app.put('/api/planet/update/:id',
     planetController.updatePlanet,
   )
   // Delete planet route
-  app.delete('api/planet/delete/:id',
+  app.delete('/api/planet/delete/:id',
     planetController.deletePlanet,
   )
 }

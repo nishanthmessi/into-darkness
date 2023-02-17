@@ -53,6 +53,7 @@ const updatePlanet = async (req, res) => {
     successResponseBody.message = "Updated successfully" 
     return res.status(STATUS.OK).json(successResponseBody)
   } catch (error) {
+    console.log(error)
     errorResponseBody.err = error
     errorResponseBody.message = "Unable to update planet details"
     return res.status(STATUS.INTERNAL_SERVER_ERROR).json(errorResponseBody)

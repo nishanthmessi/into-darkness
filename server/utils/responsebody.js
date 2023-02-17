@@ -6,7 +6,6 @@ const errorResponseBody = {
 }
 
 const successResponseBody = {
-  err: {},
   data: {},
   message: 'Successfully processed the request',
   success: true

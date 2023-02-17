@@ -25,7 +25,6 @@ const getPlanets = async (filter) => {
       code: STATUS.NOT_FOUND
     }
   }
-
   return planets
 }
 
@@ -42,7 +41,7 @@ const getPlanet = async (id) => {
 }
 
 // Update planet data
-const updateBike = async (id, data) => {
+const updatePlanet = async (id, data) => {
   try {
     const planet = await Planet.findByIdAndUpdate(id, data)
     return planet
@@ -70,5 +69,5 @@ const deletePlanet = async (id) => {
 }
 
 module.exports = {
-  createPlanet, getPlanets, getPlanet, updateBike, deletePlanet
+  createPlanet, getPlanets, getPlanet, updatePlanet, deletePlanet
 }

@@ -1,17 +1,14 @@
-import Profile from "./components/Profile"
-import Login from "./components/Login"
-import Theme from "./components/Theme"
 import Hero from "./components/Hero"
 import Details from "./components/Details"
+import Axios from "axios"
 
 function App() {
+  Axios.defaults.baseURL = "http://localhost:8000"
+
   return (
     <div className="">
       <Hero />
       <Details />
-      {/* <Profile />
-      <Login />
-      <Theme /> */}
     </div>
   )
 }

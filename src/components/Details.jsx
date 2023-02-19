@@ -1,4 +1,5 @@
-import React from 'react'
+import Axios from "axios"
+import { useEffect, useState } from "react"
 
 const Details = () => {
   return (
@@ -6,11 +7,11 @@ const Details = () => {
     <div className='flex justify-center w-[90%] m-auto mt-10'>
       <div className='w-3/4 mx-10 flex flex-col items-center'>
         {/* <h1 className='text-xl font-bold my-2'>In Depth</h1> */}
-        <p className='max-w-2xl text-xl'>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere, tempore repudiandae rem sapiente ut magnam molestiae necessitatibus dicta repellendus natus? Vitae possimus sapiente voluptatibus expedita nobis illo! Quas nihil, deserunt officia commodi vitae blanditiis et sapiente velit, quam, debitis eos.</p>
+        <p className='max-w-2xl text-xl'></p>
 
         <div className='mt-10'>
           <h1 className='text-3xl font-bold'>Namesake</h1>
-          <p className='max-w-2xl text-xl'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis quidem labore ab autem unde quibusdam dolorem sapiente voluptatum adipisci dolorum.</p>
+          <p className='max-w-2xl text-xl'></p>
         </div>
 
         <div className='mt-10'>

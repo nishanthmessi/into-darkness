@@ -7,10 +7,13 @@ import { Provider } from 'react-redux'
 import userReducer from './features/user'
 import themeReducer from './features/theme'
 
+import planetReducer from './features/planet'
+
 const store = configureStore({
   reducer: {
     user: userReducer,
     theme: themeReducer,
+    planetDetails: planetReducer
   },
 })
 

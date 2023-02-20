@@ -2,6 +2,19 @@ import Axios from "axios"
 import { useEffect, useState } from "react"
 
 const Details = () => {
+  const [planetData, setPlanetData] = useState()
+  console.log(planetData)
+
+  const getPlanet =  async () => {
+    const res = await Axios.get(`/api/planet/63ef2095a3a6782f2ea3a935`)
+    const details = res.data.data.planetDetails
+    setPlanetData(details)
+  }
+
+  useEffect(() => {
+    getPlanet()
+  }, [])
+
   return (
     <>
     <div className='flex justify-center w-[90%] m-auto mt-10'>
@@ -11,7 +24,7 @@ const Details = () => {
 
         <div className='mt-10'>
           <h1 className='text-3xl font-bold'>Namesake</h1>
-          <p className='max-w-2xl text-xl'></p>
+          <p className='max-w-2xl text-xl'>{planetData.namesake}</p>
         </div>
 
         <div className='mt-10'>

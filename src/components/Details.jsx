@@ -1,7 +1,11 @@
 import { useEffect, useState } from "react"
 import Axios from "axios"
+import { useDispatch } from "react-redux"
+import { planetDetails } from "../features/planet"
 
 const Details = () => {
+  const dispatch = useDispatch()
+
   const [planetData, setPlanetData] = useState("")
   const [quickFacts, setQuickFacts] = useState("")
 
@@ -10,7 +14,8 @@ const Details = () => {
     const details = res.data.data.planetDetails
     const facts = res.data.data
     setPlanetData(details)
-    setQuickFacts(facts)
+    setQuickFacts(facts) 
+    dispatch(planetDetails(facts))  
   }
 
   useEffect(() => {
@@ -52,7 +57,7 @@ const Details = () => {
       
       <div className='md:w-[30%] mt-12 sm:mt-0'>
         <h1 className='text-3xl font-semibold mb-8 text-center sm:text-start'>Quick Facts</h1>
-          <div className="uppercase flex flex-col items-center gap-4 sm:items-start">
+          <div className="uppercase flex flex-col items-center gap-4 text-center sm:text-start sm:items-start">
             <div>
               <h2>Distance from Sun</h2>
               <p className="text-2xl">{quickFacts.distancefromSun} kms</p>  

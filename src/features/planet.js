@@ -1,21 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  description: "",
-  namesake: "",
-  potentialforLife: "",
-  sizenDistance: "",
-  orbitnRotation: "",
-  moons: ""
-}
+const initialStateValue = ""
 
 export const planetSlice = createSlice({
   name: "planet",
-  initialState: {value: initialState},
+  initialState: {value: initialStateValue},
   reducers: {
     planetDetails: (state, action) => {
       state.value = action.payload
-    }
+    },
   }
 })
 

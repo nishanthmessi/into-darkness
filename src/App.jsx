@@ -1,5 +1,6 @@
 import Hero from "./components/Hero"
 import Details from "./components/Details"
+import Destination from "./components/Destination"
 import Axios from "axios"
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="">
       <Hero />
       <Details />
+      <Destination />
     </div>
   )
 }

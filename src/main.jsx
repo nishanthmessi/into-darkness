@@ -13,7 +13,7 @@ const store = configureStore({
   reducer: {
     user: userReducer,
     theme: themeReducer,
-    planetDetails: planetReducer
+    planet: planetReducer
   },
 })
 

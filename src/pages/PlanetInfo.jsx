@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react"
 import HeroImg from "../assets/mercurypng.png"
 import Axios from "axios"
+import Details from "../components/Details"
+import Destination from "../components/Destination"
 
-const Hero = () => {
+const PlanetInfo = () => {
   const [planetData, setPlanetData] = useState("")
 
   useEffect(() => {
@@ -30,8 +32,10 @@ const Hero = () => {
           <p className="text-3xl my-2">{planetData.subTitle}</p>
         </div>
       </div>
+      <Details />
+      <Destination />
     </>
   )
 }
 
-export default Hero
+export default PlanetInfo

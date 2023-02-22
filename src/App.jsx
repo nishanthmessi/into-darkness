@@ -1,16 +1,17 @@
-import Hero from "./components/Hero"
-import Details from "./components/Details"
-import Destination from "./components/Destination"
+import { Routes, Route } from "react-router-dom"
 import Axios from "axios"
+import Home from "./pages/Home"
+import PlanetInfo from "./pages/PlanetInfo"
 
 function App() {
   Axios.defaults.baseURL = "http://localhost:8000"
 
   return (
     <div className="">
-      <Hero />
-      <Details />
-      <Destination />
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/planet-info" element={<PlanetInfo/>}/>
+      </Routes>
     </div>
   )
 }

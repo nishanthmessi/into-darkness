@@ -24,8 +24,8 @@ const Details = () => {
 
   return (
     <>
-    <div className='flex flex-col justify-center w-[90%] m-auto mt-10 md:flex-row'>
-      <div className='w-3/4 mx-10 flex flex-col items-center text-lg text-gray-700'>
+    <div className='flex flex-col justify-center w-[90%] m-auto mt-10 lg:flex-row'>
+      <div className='lg:w-3/4 mx-10 flex flex-col items-center text-lg text-gray-700'>
         {/* <h1 className='text-xl font-bold my-2'>In Depth</h1> */}
         <p className='max-w-2xl'>{planetData.description}</p>
 
@@ -57,7 +57,7 @@ const Details = () => {
       
       <div className='lg:w-[30%] mt-12 lg:mt-0'>
         <h1 className='text-3xl font-semibold mb-8 text-center lg:text-start'>Quick Facts</h1>
-          <div className="uppercase flex flex-col items-center gap-4 text-center lg:text-start md:items-start">
+          <div className="uppercase flex flex-col items-center gap-4 text-center lg:text-start lg:items-start">
             <div>
               <h2 className="font-semibold text-gray-600">Distance from Sun</h2>
               <p className="text-2xl">{quickFacts.distancefromSun} kms</p>  

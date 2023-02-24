@@ -9,9 +9,13 @@ export const planetSlice = createSlice({
     planetDetails: (state, action) => {
       state.value = action.payload
     },
+
+    getPlanetId: (state, action) => {
+      state.value = action.payload
+    }
   }
 })
 
-export const {planetDetails} = planetSlice.actions
+export const {planetDetails, getPlanetId} = planetSlice.actions
 
 export default planetSlice.reducer

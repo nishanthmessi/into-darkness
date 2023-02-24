@@ -3,13 +3,15 @@ import HeroImg from "../assets/mercurypng.png"
 import Axios from "axios"
 import Details from "../components/Details"
 import Destination from "../components/Destination"
+import { useSelector } from "react-redux"
 
 const PlanetInfo = () => {
   const [planetData, setPlanetData] = useState("")
+  const planet = useSelector((state) => state.planet.value)
 
   useEffect(() => {
-    const getPlanet =  async () => {
-      const res = await Axios.get(`/api/planet/63ef2095a3a6782f2ea3a935`)
+    const getPlanet = async () => {
+      const res = await Axios.get(`/api/planet/${planet}`)
       const details = res.data.data
       setPlanetData(details)
     }
@@ -32,7 +34,11 @@ const PlanetInfo = () => {
           <p className="text-3xl my-2">{planetData.subTitle}</p>
         </div>
       </div>
-      <Details />
+      {planetData ? 
+        <Details planetData={planetData}/>
+      :
+      <div>Loading</div>
+      }
       <Destination />
     </>
   )

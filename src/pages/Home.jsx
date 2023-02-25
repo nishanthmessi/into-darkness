@@ -25,7 +25,7 @@ const Home = () => {
           planets.map((planet) => (
             <div key={planet._id}>
               <Link 
-                to= {`/planet-info/${planet.planetName.toLowerCase()}`}
+                to= {`/${planet.planetName.toLowerCase()}`}
                 onClick={() => dispatch(getPlanetId(planet._id))}
               >
                 <h2>{planet.planetName}</h2>

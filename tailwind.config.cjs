@@ -27,6 +27,11 @@ module.exports = {
           'background-position': 'center',
           'background-size': 'cover',
         },
+        '.bg-home': {
+          'background-image' : `linear-gradient(rgba(0, 0, 0, 0.500),rgba(0, 0, 0, 0.6)) , url(/src/assets/space.jpg)`,
+          'background-position': 'center',
+          'background-size': 'cover',
+        },
       });
     }),
   ],

@@ -20,7 +20,7 @@ const PlanetInfo = () => {
 
   return (
     <>
-      <div className="flex flex-col lg:flex-row bg-gray-900 h-screen text-white bg-hero py-10 lg:py-0">
+      <div className="flex flex-col items-center lg:flex-row bg-gray-900 h-[86vh] text-white bg-hero py-10 lg:py-0">
         <div className="lg:w-1/2 h-screen flex justify-center items-center">
           <img
             src={HeroImg}

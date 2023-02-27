@@ -19,20 +19,28 @@ const Home = () => {
   }, [])
 
   return (
-    <div className="bg-gray-700 flex flex-col justify-center items-center h-screen">
-      <h1 className="text-white">Home</h1>
+    <div className="flex flex-col justify-center items-center h-screen bg-home">
+      <h1 className="text-8xl font-bold text-white mb-6">Solar Realm</h1>
+      <div>
+
+      </div>
+      <p className="text-gray-200 text-xl">"Our planetary system is located in an outer spiral arm of the Milky Way galaxy."</p>
+      <h2 className="text-white mt-14 mb-6 text-xl font-semibold">Check out the planets in our solar system</h2>
+      <div className="flex gap-3">
         {
           planets.map((planet) => (
-            <div key={planet._id}>
+            <div key={planet._id} className="flex">
               <Link 
                 to= {`/${planet.planetName.toLowerCase()}`}
                 onClick={() => dispatch(getPlanetId(planet._id))}
+                className="px-6 py-2 bg-zinc-800 hover:bg-zinc-900 rounded-md text-white"
               >
                 <h2>{planet.planetName}</h2>
               </Link>
             </div>
           ))
         }
+      </div>
     </div>
   )
 }

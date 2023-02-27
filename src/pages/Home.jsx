@@ -33,9 +33,9 @@ const Home = () => {
               <Link 
                 to= {`/${planet.planetName.toLowerCase()}`}
                 onClick={() => dispatch(getPlanetId(planet._id))}
-                className="px-6 py-2 bg-zinc-800 hover:bg-zinc-900 rounded-md text-white"
+                className="px-10 py-4 bg-zinc-800 hover:bg-zinc-900 rounded-md text-white"
               >
-                <h2>{planet.planetName}</h2>
+                <h2 className="text-lg">{planet.planetName}</h2>
               </Link>
             </div>
           ))
